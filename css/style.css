@@ -234,19 +234,66 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #19191B;
+  color: #19191b;
+  z-index: 3;
+  width: 50%;
+  height: 80px;
+  cursor: pointer;
 }
 
+.content-switcher {
+  margin-bottom: 76px;
+  transition: 0.8s all;
+}
 .content-switcher__wrap {
   width: 100%;
-  height: 110px;
+  height: 80px;
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 11px 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  position: relative;
+  transition: 0.5s all;
 }
-.content-switcher__portfolio, .content-switcher__experience {
+.content-switcher__wrap-main {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 110px;
+  padding: 15px 3%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  position: relative;
+}
+.content-switcher__slider {
+  position: absolute;
   width: 50%;
+  height: 80px;
+  background-color: #d7d7d7;
+  border-radius: 10px;
+  transition: 0.5s all;
+}
+
+.experience-on {
+  transform: translateX(100%);
+}
+
+.main {
+  margin-bottom: 130px;
+}
+.main__portfolio {
+  width: 100%;
+}
+
+.portfolio__projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 32px;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
 }/*# sourceMappingURL=style.css.map */

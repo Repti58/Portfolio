@@ -108,14 +108,23 @@ meter {
       url("../fonts/poppins-v20-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+$color-main-neutral: #ffffff;
+$color-main-bg: #e5e5e5;
+$color-text-dark: #3d3d3d;
+$color-text-darker: #19191b;
+$color-text-light: #575757;
+$color-theme-dark: #171f26;
+$color-main-accent: #fbd144;
+$color-switcher-dark: #d7d7d7;
+
 body {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
   line-height: 33px;
-  color: #575757;
-  background-color: #e5e5e5;
+  color: $color-text-light;
+  background-color: $color-main-bg;
 }
 
 .wrapper-sm {
@@ -132,10 +141,10 @@ body {
   position: relative;
 
   &_light {
-    background-color: #ffffff;
+    background-color: $color-main-neutral;
   }
   &_dark {
-    background-color: #171f26;
+    background-color: $color-theme-dark;
   }
 }
 
@@ -180,7 +189,7 @@ body {
     width: 100%;
     font-size: 46px;
     line-height: 69px;
-    color: #3d3d3d;
+    color: $color-text-dark;
     margin-bottom: 3px;
   }
 
@@ -226,12 +235,12 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  color: #3d3d3d;
+  color: $color-text-dark;
 }
 .button {
   &__cv {
     @extend %button;
-    background-color: #fbd144;
+    background-color: $color-main-accent;
     &::after {
       width: 45px;
       height: 24px;
@@ -241,7 +250,7 @@ body {
   }
   &__contact {
     @extend %button;
-    background-color: #ffffff;
+    background-color: $color-main-neutral;
   }
 }
 
@@ -251,24 +260,79 @@ body {
 }
 
 %content-switcher {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #19191B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-darker;
+  z-index: 3;
+  width: 50%;
+  height: 80px;
+  cursor: pointer;
 }
 .content-switcher {
+  margin-bottom: 76px;
+  transition: 0.8s all;
+
   &__wrap {
     width: 100%;
-    height: 110px;
-    background-color: #ffffff;
+    height: 80px;
+    background-color: $color-main-neutral;
     border-radius: 20px;
-    padding: 11px 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    position: relative;
+    transition: 0.5s all;
+
+    &-main {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 110px;
+      padding: 15px 3%;
+      background-color: $color-main-neutral;
+      border-radius: 20px;
+      position: relative;
+    }
   }
-&__portfolio, &__experience {
+
+  &__portfolio,
+  &__experience {
     @extend %content-switcher;
+    
+
+  }
+  &__slider {
+    position: absolute;
     width: 50%;
+    height: 80px;
+    background-color: $color-switcher-dark;
+    border-radius: 10px;
+    transition: 0.5s all;
+  }
 }
+
+.experience-on {
+  transform: translateX(100%);
+}
+
+.main {
+  margin-bottom: 130px;
+  &__portfolio {
+    width: 100%;
+  }
+}
+
+.portfolio {
+  &__projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 32px;
+  }
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
 }
