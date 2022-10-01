@@ -1,0 +1,223 @@
+/***
+    The new CSS reset - version 1.7.3 (last updated 7.8.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::-moz-placeholder {
+  color: unset;
+}
+:-ms-input-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/poppins-v20-latin-regular.woff2") format("woff2"), url("../fonts/poppins-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-500 - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/poppins-v20-latin-500.woff2") format("woff2"), url("../fonts/poppins-v20-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+body {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 33px;
+  color: #575757;
+  background-color: #e5e5e5;
+}
+
+.wrapper-sm {
+  max-width: 630px;
+  margin: 0 auto;
+}
+
+.theme-button {
+  margin: 0 auto;
+  margin: 33px auto 65px auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+}
+.theme-button_light {
+  background-color: #ffffff;
+}
+.theme-button_dark {
+  background-color: #171f26;
+}
+
+.theme-button__ico {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-48%);
+  width: 40px;
+  height: 40px;
+}
+.theme-button__ico_light {
+  background: url(../img/svg/theme-light-ico.svg) no-repeat center;
+}
+.theme-button__ico_dark {
+  background: url(../img/svg/theme-light-ico.svg) no-repeat center;
+}
+
+.profile__info {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 48px;
+}
+.profile__image {
+  width: 215px;
+  height: 215px;
+  margin-right: 40px;
+}
+.profile__personal-data {
+  max-width: 372px;
+}
+.profile__name {
+  width: 100%;
+  font-size: 46px;
+  line-height: 69px;
+  color: #3d3d3d;
+  margin-bottom: 3px;
+}
+.profile__profession {
+  margin-bottom: 12px;
+}
+.profile__social-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+.profile__social-link {
+  margin-right: 26px;
+}
+.profile__social-link-ico {
+  width: 36px;
+  height: 36px;
+}
+
+.skills__list {
+  width: 100%;
+}
+
+.buttons__wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.button__contact, .button__cv {
+  width: 290px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #3D3D3D;
+}
+
+.button__cv {
+  background-color: #fbd144;
+}
+.button__cv::after {
+  width: 45px;
+  height: 24px;
+  content: "";
+  background: url(../img/svg/download-pic.svg) no-repeat right;
+}
+.button__contact {
+  background-color: #ffffff;
+}/*# sourceMappingURL=style.css.map */
