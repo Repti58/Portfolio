@@ -4,10 +4,46 @@ const portfolioBtn = document.querySelector('.content-switcher__portfolio');
 const experienceBtn = document.querySelector('.content-switcher__experience')
 portfolioBtn.addEventListener('click', () => {
     switcher.classList.remove('experience-on')
-    // switcher.classList.add('portfolio-on')
 })
 experienceBtn.addEventListener('click', () => {
-    // switcher.classList.remove('portfolio-on')
     switcher.classList.add('experience-on')
+})
+}())
+
+(function () {
+const themeBtn = document.querySelector('.theme-button');
+const themeBtnIco = document.querySelector('.theme-button__ico');
+const body = document.querySelector('body');
+const contactBtn = document.querySelector('.button__contact');
+const cvBtn = document.querySelector('.button__cv');
+const profileName = document.querySelector('.profile__name');
+const switcher = document.querySelector('.content-switcher__wrap-main');
+const slider = document.querySelector('.content-switcher__slider');
+const switchePortfolio = document.querySelector('.content-switcher__portfolio');
+const switcherExperience = document.querySelector('.content-switcher__experience');
+themeBtn.addEventListener('click', () => {
+    if (themeBtn.classList[2] === 'theme-button_dark') {
+        themeBtn.classList.remove('theme-button_dark');
+        themeBtnIco.classList.remove('theme-button__ico_dark');
+        body.classList.remove('body_dark-theme');
+        contactBtn.classList.remove('button__contact_dark-theme');
+        cvBtn.classList.remove('button__cv_dark-theme');
+        profileName.classList.remove('profile__name_dark-theme');
+        switcher.classList.remove('content-switcher__wrap-main_dark-theme');
+        slider.classList.remove('content-switcher__slider_dark-theme');
+        switchePortfolio.classList.remove('content-switcher__portfolio_dark-theme');
+        switcherExperience.classList.remove('content-switcher__experience_dark-theme');
+    } else {
+        themeBtn.classList.add('theme-button_dark');
+        themeBtnIco.classList.add('theme-button__ico_dark');
+        body.classList.add('body_dark-theme')
+        contactBtn.classList.add('button__contact_dark-theme')
+        cvBtn.classList.add('button__cv_dark-theme')
+        profileName.classList.add('profile__name_dark-theme')
+        switcher.classList.add('content-switcher__wrap-main_dark-theme')
+        slider.classList.add('content-switcher__slider_dark-theme')
+        switchePortfolio.classList.add('content-switcher__portfolio_dark-theme')
+        switcherExperience.classList.add('content-switcher__experience_dark-theme');
+    } 
 })
 }())

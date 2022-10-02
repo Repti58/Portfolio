@@ -108,23 +108,35 @@ meter {
       url("../fonts/poppins-v20-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-$color-main-neutral: #ffffff;
-$color-main-bg: #e5e5e5;
+$color-neutral-light-theme: #ffffff;
+$color-neutral-dark-theme: #171F26;
+$color-bg-light-theme: #E9EBEC;
+$color-bg-dark-theme: #0C151D;
 $color-text-dark: #3d3d3d;
 $color-text-darker: #19191b;
-$color-text-light: #575757;
-$color-theme-dark: #171f26;
-$color-main-accent: #fbd144;
-$color-switcher-dark: #d7d7d7;
+$color-text-main-light-theme: #575757;
+$color-main-accent-light-theme: #fbd144;
+$color-main-accent-dark-theme: #FFE071;
+$color-switcher-light-theme: #d7d7d7;
+$color-switcher-dark-theme: #0C151D;
+$color-text-main-dark-theme: #A3ABB2;
+$color-caption-dark-theme: #F1F2F4;
 
-body {
+
+.body {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
   line-height: 33px;
-  color: $color-text-light;
-  background-color: $color-main-bg;
+  color: $color-text-main-light-theme;
+  background-color: $color-bg-light-theme;
+  transition: .4s all;
+  
+  &_dark-theme {
+      background-color: $color-bg-dark-theme;
+      color: $color-text-main-dark-theme;
+  }
 }
 
 .wrapper-sm {
@@ -141,10 +153,10 @@ body {
   position: relative;
 
   &_light {
-    background-color: $color-main-neutral;
+    background-color: $color-neutral-light-theme;
   }
   &_dark {
-    background-color: $color-theme-dark;
+    background-color: $color-neutral-dark-theme;
   }
 }
 
@@ -160,7 +172,7 @@ body {
     background: url(../img/svg/theme-light-ico.svg) no-repeat center;
   }
   &_dark {
-    background: url(../img/svg/theme-light-ico.svg) no-repeat center;
+    background: url(../img/svg/theme-dark-ico.svg) no-repeat center;
   }
 }
 
@@ -191,6 +203,11 @@ body {
     line-height: 69px;
     color: $color-text-dark;
     margin-bottom: 3px;
+    transition: .4s all;
+
+    &_dark-theme {
+        color: $color-caption-dark-theme;
+    }
   }
 
   &__profession {
@@ -236,21 +253,32 @@ body {
   justify-content: center;
   border-radius: 10px;
   color: $color-text-dark;
+  transition: .4s all;
+
 }
 .button {
   &__cv {
     @extend %button;
-    background-color: $color-main-accent;
+    background-color: $color-main-accent-light-theme;
     &::after {
       width: 45px;
       height: 24px;
       content: "";
       background: url(../img/svg/download-pic.svg) no-repeat right;
+
+    }
+    &_dark-theme {
+      background-color: $color-main-accent-dark-theme;
     }
   }
   &__contact {
     @extend %button;
-    background-color: $color-main-neutral;
+    background-color: $color-neutral-light-theme;
+    
+    &_dark-theme {
+        background-color: $color-neutral-dark-theme;
+        color: $color-text-main-dark-theme;
+    }
   }
 }
 
@@ -268,21 +296,22 @@ body {
   width: 50%;
   height: 80px;
   cursor: pointer;
+  transition: .4s all;
+  &_dark-theme {
+    color: $color-text-main-dark-theme;
+  }
 }
 .content-switcher {
   margin-bottom: 76px;
-  transition: 0.8s all;
 
   &__wrap {
     width: 100%;
     height: 80px;
-    background-color: $color-main-neutral;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     position: relative;
-    transition: 0.5s all;
 
     &-main {
       display: flex;
@@ -290,25 +319,36 @@ body {
       width: 100%;
       height: 110px;
       padding: 15px 3%;
-      background-color: $color-main-neutral;
+      background-color: $color-neutral-light-theme;
       border-radius: 20px;
       position: relative;
+      transition: .4s all;
+
+      &_dark-theme {
+        background-color: $color-neutral-dark-theme;
+      }
     }
   }
 
   &__portfolio,
   &__experience {
-    @extend %content-switcher;
-    
-
+    @extend %content-switcher;   
+    &_dark-theme {
+        @extend %content-switcher_dark-theme;
+    }
   }
+
   &__slider {
     position: absolute;
     width: 50%;
     height: 80px;
-    background-color: $color-switcher-dark;
+    background-color: $color-switcher-light-theme;
     border-radius: 10px;
-    transition: 0.5s all;
+    transition: .4s all;
+
+    &_dark-theme {
+        background-color: $color-switcher-dark-theme; 
+    }
   }
 }
 
