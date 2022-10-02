@@ -1,12 +1,20 @@
 (function () {
 const switcher = document.querySelector('.content-switcher__slider');
-const portfolioBtn = document.querySelector('.content-switcher__portfolio');
+const projectsBtn = document.querySelector('.content-switcher__projects');
 const experienceBtn = document.querySelector('.content-switcher__experience')
-portfolioBtn.addEventListener('click', () => {
-    switcher.classList.remove('experience-on')
+const portfolioExperience = document.querySelector('.portfolio__experience');
+const portfolioProjects = document.querySelector('.portfolio__projects');
+
+projectsBtn.addEventListener('click', () => {
+    switcher.classList.remove('experience-on');
+    portfolioExperience.classList.remove('portfolio__experience_open');
+    portfolioProjects.classList.add('portfolio__projects_open');
+
 })
 experienceBtn.addEventListener('click', () => {
-    switcher.classList.add('experience-on')
+    switcher.classList.add('experience-on');
+    portfolioExperience.classList.add('portfolio__experience_open')
+    portfolioProjects.classList.remove('portfolio__projects_open')
 })
 }())
 
@@ -19,7 +27,7 @@ const cvBtn = document.querySelector('.button__cv');
 const profileName = document.querySelector('.profile__name');
 const switcher = document.querySelector('.content-switcher__wrap-main');
 const slider = document.querySelector('.content-switcher__slider');
-const switchePortfolio = document.querySelector('.content-switcher__portfolio');
+const switchePortfolio = document.querySelector('.content-switcher__projects');
 const switcherExperience = document.querySelector('.content-switcher__experience');
 themeBtn.addEventListener('click', () => {
     if (themeBtn.classList[2] === 'theme-button_dark') {
@@ -31,7 +39,7 @@ themeBtn.addEventListener('click', () => {
         profileName.classList.remove('profile__name_dark-theme');
         switcher.classList.remove('content-switcher__wrap-main_dark-theme');
         slider.classList.remove('content-switcher__slider_dark-theme');
-        switchePortfolio.classList.remove('content-switcher__portfolio_dark-theme');
+        switchePortfolio.classList.remove('content-switcher__projects_dark-theme');
         switcherExperience.classList.remove('content-switcher__experience_dark-theme');
     } else {
         themeBtn.classList.add('theme-button_dark');
@@ -42,7 +50,7 @@ themeBtn.addEventListener('click', () => {
         profileName.classList.add('profile__name_dark-theme')
         switcher.classList.add('content-switcher__wrap-main_dark-theme')
         slider.classList.add('content-switcher__slider_dark-theme')
-        switchePortfolio.classList.add('content-switcher__portfolio_dark-theme')
+        switchePortfolio.classList.add('content-switcher__projects_dark-theme')
         switcherExperience.classList.add('content-switcher__experience_dark-theme');
     } 
 })

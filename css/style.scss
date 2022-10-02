@@ -330,7 +330,7 @@ $color-caption-dark-theme: #F1F2F4;
     }
   }
 
-  &__portfolio,
+  &__projects,
   &__experience {
     @extend %content-switcher;   
     &_dark-theme {
@@ -358,16 +358,42 @@ $color-caption-dark-theme: #F1F2F4;
 
 .main {
   margin-bottom: 130px;
-  &__portfolio {
-    width: 100%;
-  }
 }
 
 .portfolio {
+    position: relative;
+    overflow: hidden;
   &__projects {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 48px 32px;
+    transform: translateX(100%);
+    transition: .4s all;
+
+    &_open {
+        transform: translateX(0);
+    }
+  } 
+
+  &__project-pic {
+    max-width: 362px;
+    max-height: 226px;
+    border-radius: 15px;
+  }
+
+  &__experience {
+    width: 100%;
+    padding: 0 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: .4s all;
+
+    &_open {
+        transform: translateX(0);
+    }
   }
 }
 
