@@ -131,7 +131,7 @@ $color-caption-dark-theme: #f1f2f4;
   color: $color-text-main-light-theme;
   background-color: $color-bg-light-theme;
   transition: 0.4s all;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &_dark-theme {
     background-color: $color-bg-dark-theme;
@@ -300,7 +300,7 @@ $color-caption-dark-theme: #f1f2f4;
   z-index: 3;
   width: 50%;
   height: 80px;
-  cursor: pointer;   
+  cursor: pointer;
   transition: 0.4s all;
   &_dark-theme {
     color: $color-text-main-dark-theme;
@@ -521,7 +521,7 @@ $color-caption-dark-theme: #f1f2f4;
   }
 
   .button {
-    &__cv,    
+    &__cv,
     &__contact {
       font-size: 12px;
       line-height: 18px;
@@ -537,26 +537,28 @@ $color-caption-dark-theme: #f1f2f4;
 
   .content-switcher {
     &__wrap-main {
-    height: 64px;
-    border-radius: 10px;
+      height: 64px;
+      border-radius: 10px;
+    }
+    &__slider {
+      height: 50px;
+    }
+    &__projects,
+    &__experience {
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
-  &__slider {
-    height: 50px;
-  }
-  &__projects, &__experience {
-    font-size: 14px;
-    line-height: 21px;
-  }
-}
 
-.portfolio {
-  &__project-desc, &__experience {
-  font-size: 14px;
-  line-height: 21px;
-}
-}
+  .portfolio {
+    &__project-desc,
+    &__experience {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
 
-.footer__copyright {
-  font-size: 12px;
-}
+  .footer__copyright {
+    font-size: 12px;
+  }
 }
