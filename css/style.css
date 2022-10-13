@@ -147,7 +147,7 @@ meter {
   background-color: #ffffff;
 }
 .theme-button_dark {
-  background-color: #171f26;
+  background-color: #222d36;
 }
 
 .theme-button__ico {
@@ -250,7 +250,7 @@ meter {
   background-color: #ffffff;
 }
 .button__contact_dark-theme {
-  background-color: #171f26;
+  background-color: #222d36;
   color: #a3abb2;
 }
 
@@ -295,7 +295,7 @@ meter {
   transition: 0.4s all;
 }
 .content-switcher__wrap-main_dark-theme {
-  background-color: #171f26;
+  background-color: #222d36;
 }
 .content-switcher__slider {
   position: absolute;
@@ -324,7 +324,6 @@ meter {
   overflow: hidden;
 }
 .portfolio__projects {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 48px 4.1%;
@@ -335,7 +334,40 @@ meter {
   transform: translateX(0);
 }
 .portfolio__project-pic {
+  width: auto;
   border-radius: 15px;
+}
+.portfolio__project-pic_light-border {
+  border-spacing: 3px;
+  border: solid #d7d7d7 5px;
+}
+.portfolio .project-desc {
+  padding: 0 10px;
+}
+.portfolio .project-desc__title {
+  margin-bottom: 10px;
+}
+.portfolio .project-desc__text {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.portfolio .project-desc__links {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.portfolio .project-desc__links-title {
+  font-size: 14px;
+  line-height: 20px;
+  color: #19191b;
+  background-color: #a3abb2;
+  border-radius: 7px;
+}
+.portfolio .project-desc__link {
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 10px;
 }
 .portfolio__experience {
   width: 100%;
@@ -358,7 +390,7 @@ meter {
   text-align: center;
 }
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 627px) {
   .theme-button {
     margin-bottom: 30px;
   }

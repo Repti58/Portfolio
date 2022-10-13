@@ -29,6 +29,7 @@ const switcher = document.querySelector('.content-switcher__wrap-main');
 const slider = document.querySelector('.content-switcher__slider');
 const switchePortfolio = document.querySelector('.content-switcher__projects');
 const switcherExperience = document.querySelector('.content-switcher__experience');
+const portfolioProjectPic = document.querySelectorAll('.portfolio__project-pic')
 themeBtn.addEventListener('click', () => {
     if (themeBtn.classList[2] === 'theme-button_dark') {
         themeBtn.classList.remove('theme-button_dark');
@@ -41,6 +42,9 @@ themeBtn.addEventListener('click', () => {
         slider.classList.remove('content-switcher__slider_dark-theme');
         switchePortfolio.classList.remove('content-switcher__projects_dark-theme');
         switcherExperience.classList.remove('content-switcher__experience_dark-theme');
+        for (let i = 0; i < portfolioProjectPic.length; i++) {
+            portfolioProjectPic[i].classList.add('portfolio__project-pic_light-border')
+        }
     } else {
         themeBtn.classList.add('theme-button_dark');
         themeBtnIco.classList.add('theme-button__ico_dark');
@@ -52,6 +56,9 @@ themeBtn.addEventListener('click', () => {
         slider.classList.add('content-switcher__slider_dark-theme')
         switchePortfolio.classList.add('content-switcher__projects_dark-theme')
         switcherExperience.classList.add('content-switcher__experience_dark-theme');
+        for (let i = 0; i < portfolioProjectPic.length; i++) {
+            portfolioProjectPic[i].classList.remove('portfolio__project-pic_light-border')
+        }
     } 
 })
 }())
