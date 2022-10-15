@@ -214,17 +214,13 @@ meter {
 /*buttons start*/
 .buttons__wrap {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
   margin-bottom: 75px;
 }
-.buttons__download-cv {
-  margin-right: 10px;
-}
-
 .button__contact, .button__cv {
-  width: 290px;
+  width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
@@ -416,12 +412,6 @@ meter {
     margin-bottom: 25px;
     text-align: center;
   }
-  .buttons__wrap {
-    justify-content: space-around;
-  }
-  .button__cv, .button__contact {
-    width: 220px;
-  }
   .content-switcher {
     margin-bottom: 48px;
   }
@@ -435,8 +425,7 @@ meter {
 }
 @media screen and (max-width: 480px) {
   .buttons__wrap {
-    flex-wrap: nowrap;
-    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
     margin-bottom: 48px;
   }
   .theme-button {
@@ -471,7 +460,6 @@ meter {
   .button__cv, .button__contact {
     font-size: 12px;
     line-height: 18px;
-    max-width: 145px;
     height: 44px;
   }
   .button__cv::after {
@@ -494,6 +482,15 @@ meter {
     line-height: 21px;
   }
   .footer__copyright {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .buttons__wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .portfolio .project-desc__link {
     font-size: 12px;
   }
 }/*# sourceMappingURL=style.css.map */
