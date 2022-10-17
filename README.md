@@ -10,8 +10,12 @@
 - **Figma adaptive layout**
 - **Color theme change**
 - **Technologies used: HTML, SASS/SCSS, JavaScript**
-<br><br>
+
+## Appearance:
 <a href="https://repti85.github.io/Portfolio-site">
   <img src="img/portfolio-fullscreen-light.png">
-  <img src="img/portfolio-fullscreen-dark.png">
+  <img src="img/portfolio-fullscreen-dark.png"> 
 </a>
+
+## Performance:
+<img src="img/performance.png">
