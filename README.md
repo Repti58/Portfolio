@@ -1,6 +1,12 @@
-<h1 align="center"> Portfolio site.</h1>
-<h2> Contain completed projects.</h2>
+<h1 align="center">Portfolio site</h1>
 
+## Contain:
+- **Completed projects**
+- **Stack and experience description**
+- **CV**
+- **Contacts**
+
+## Features:
 - **Figma adaptive layout**
 - **Color theme change**
 - **Technologies used: HTML, SASS/SCSS, JavaScript**
