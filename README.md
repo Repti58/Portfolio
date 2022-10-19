@@ -1,6 +1,13 @@
-<h1 align="center">Portfolio site</h1>
+<h1 align="center">
+<a href="https://repti85.github.io/Portfolio-site/">
+Portfolio site
+</a>
+</h1>
+<p align="center">
+https://repti85.github.io/Portfolio-site
+</p>
 
-## Contain:
+## Contains:
 - **Completed projects**
 - **Stack and experience description**
 - **CV**
