@@ -159,6 +159,7 @@ $color-caption-dark-theme: #f1f2f4;
   height: 80px;
   border-radius: 50%;
   position: relative;
+  cursor: pointer;
 
   &_light {
     background-color: $color-neutral-light-theme;
@@ -373,6 +374,7 @@ $color-caption-dark-theme: #f1f2f4;
 .portfolio {
   position: relative;
   overflow: hidden;
+
   &__projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -386,9 +388,12 @@ $color-caption-dark-theme: #f1f2f4;
   }
 
   &__project {
+
     &-pic {
       width: auto;
       border-radius: 15px;
+      border: none;
+      transition: 0.4s all;
 
       &_light-border {
         border-spacing: 3px;
