@@ -128,11 +128,13 @@ meter {
 ul {
   list-style: inside;
   list-style-type: square;
+  font-weight: 600;
 }
 
-li::marker {
+::marker {
   color: #fbd144;
   font-size: 32px;
+  vertical-align: middle;
 }
 
 .wrapper-sm {
@@ -228,7 +230,7 @@ li::marker {
 }
 
 /*profile end*/
-.skills__list {
+.skills-list {
   font-size: 18px;
   padding: 0 15px;
   margin-bottom: 30px;
@@ -450,12 +452,18 @@ li::marker {
   }
 }
 @media screen and (max-width: 480px) {
+  ::marker {
+    font-size: 18px;
+  }
   .buttons__wrap {
     grid-template-columns: repeat(1, 1fr);
     margin-bottom: 48px;
   }
+  .lang-switcher {
+    margin-bottom: 10px;
+  }
   .theme-button {
-    margin: 20px auto 30px auto;
+    margin: 0 auto 15px auto;
     width: 48px;
     height: 48px;
   }
@@ -466,9 +474,16 @@ li::marker {
   .theme-button__ico_light, .theme-button__ico_dark {
     background-size: 24px 24px;
   }
+  .skills-list {
+    font-size: 12px;
+  }
+  .profile__info {
+    margin-bottom: 20px;
+  }
   .profile__image {
     width: 124px;
     height: 124px;
+    margin-bottom: 15px;
   }
   .profile__name {
     font-size: 32px;

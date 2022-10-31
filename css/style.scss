@@ -170,12 +170,14 @@ $color-caption-dark-theme: #f1f2f4;
 
 ul {
   list-style: inside;
-  list-style-type: square;
+  list-style-type: square;  
+  font-weight: 600;
 }
 
-li::marker {
+::marker {
   color: $color-main-accent-light-theme;
   font-size: 32px;
+ vertical-align: middle;
 }
 
 .wrapper-sm {
@@ -289,7 +291,7 @@ li::marker {
 }
 /*profile end*/
 
-.skills__list {
+.skills-list {
 font-size: 18px;
 padding: 0 15px;
 margin-bottom: 30px;
@@ -571,6 +573,9 @@ margin-bottom: 30px;
 }
 
 @media screen and (max-width: 480px) {
+  ::marker {
+    font-size: 18px;
+  }
   .buttons {
     // display: flex;
     // justify-content: center;
@@ -588,9 +593,11 @@ margin-bottom: 30px;
       // margin: 0 0 15px 0;
   //   }
   }
-
+  .lang-switcher {
+    margin-bottom: 10px;
+  }
   .theme-button {
-    margin: 20px auto 30px auto;
+    margin: 0 auto 15px auto;
     width: 48px;
     height: 48px;
     &__ico {
@@ -604,10 +611,19 @@ margin-bottom: 30px;
     }
   }
 
+  .skills-list {
+    font-size: 12px;
+
+  }
+
   .profile {
+    &__info {
+      margin-bottom: 20px;
+    }
     &__image {
       width: 124px;
       height: 124px;
+      margin-bottom: 15px;
     }
 
     &__name {
