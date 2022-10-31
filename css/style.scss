@@ -170,6 +170,12 @@ $color-caption-dark-theme: #f1f2f4;
 
 ul {
   list-style: inside;
+  list-style-type: square;
+}
+
+li::marker {
+  color: $color-main-accent-light-theme;
+  font-size: 32px;
 }
 
 .wrapper-sm {
@@ -233,7 +239,7 @@ ul {
   &__info {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     align-items: center;
     margin-bottom: 48px;
   }
@@ -282,6 +288,12 @@ ul {
   }
 }
 /*profile end*/
+
+.skills__list {
+font-size: 18px;
+padding: 0 15px;
+margin-bottom: 30px;
+}
 
 /*buttons start*/
 .buttons {
@@ -417,8 +429,7 @@ ul {
 .portfolio {
   position: relative;
   overflow: hidden;
-  // height: 2000px;
-
+  
   &__projects {
     position: absolute;
     top: 0;

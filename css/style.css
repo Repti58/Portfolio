@@ -127,6 +127,12 @@ meter {
 
 ul {
   list-style: inside;
+  list-style-type: square;
+}
+
+li::marker {
+  color: #fbd144;
+  font-size: 32px;
 }
 
 .wrapper-sm {
@@ -182,7 +188,6 @@ ul {
 .profile__info {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 48px;
 }
@@ -223,6 +228,12 @@ ul {
 }
 
 /*profile end*/
+.skills__list {
+  font-size: 18px;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
 /*buttons start*/
 .buttons__wrap {
   width: 100%;
