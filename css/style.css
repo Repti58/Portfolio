@@ -141,10 +141,13 @@ ul {
   margin: 0 auto;
 }
 
+.lang-switcher {
+  text-align: center;
+}
+
 /*theme button start*/
 .theme-button {
-  margin: 0 auto;
-  margin: 33px auto 65px auto;
+  margin: 33px auto 10px auto;
   width: 80px;
   height: 80px;
   border-radius: 50%;
