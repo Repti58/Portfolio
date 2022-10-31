@@ -92,22 +92,25 @@ meter {
   -webkit-user-drag: element;
 }
 
-/* poppins-regular - latin */
+/* nunito-regular - latin_cyrillic */
 @font-face {
-  font-family: "Poppins";
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("../fonts/poppins-v20-latin-regular.woff2") format("woff2"), url("../fonts/poppins-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/nunito-v25-latin_cyrillic-regular.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/nunito-v25-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito-v25-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/nunito-v25-latin_cyrillic-regular.woff") format("woff"), url("../fonts/nunito-v25-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/nunito-v25-latin_cyrillic-regular.svg#Nunito") format("svg"); /* Legacy iOS */
 }
-/* poppins-500 - latin */
+/* nunito-500 - latin_cyrillic */
 @font-face {
-  font-family: "Poppins";
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 500;
-  src: local(""), url("../fonts/poppins-v20-latin-500.woff2") format("woff2"), url("../fonts/poppins-v20-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/nunito-v25-latin_cyrillic-500.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/nunito-v25-latin_cyrillic-500.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito-v25-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/nunito-v25-latin_cyrillic-500.woff") format("woff"), url("../fonts/nunito-v25-latin_cyrillic-500.ttf") format("truetype"), url("../fonts/nunito-v25-latin_cyrillic-500.svg#Nunito") format("svg"); /* Legacy iOS */
 }
+/* poppins-regular - latin */
 .body {
-  font-family: "Poppins";
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
@@ -120,6 +123,10 @@ meter {
 .body_dark-theme {
   background-color: #0c151d;
   color: #a3abb2;
+}
+
+ul {
+  list-style: inside;
 }
 
 .wrapper-sm {
@@ -229,6 +236,7 @@ meter {
   border-radius: 10px;
   color: #3d3d3d;
   transition: 0.4s background-color;
+  cursor: pointer;
 }
 
 .button__cv {
@@ -321,6 +329,9 @@ meter {
   overflow: hidden;
 }
 .portfolio__projects {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 48px 4.1%;
@@ -371,9 +382,6 @@ meter {
 .portfolio__experience {
   width: 100%;
   padding: 0 15px;
-  position: absolute;
-  top: 0;
-  left: 0;
   transform: translateX(-100%);
   transition: 0.4s all;
 }

@@ -88,25 +88,54 @@ meter {
 }
 // reset CSS end
 
-/* poppins-regular - latin */
+
+
+/* nunito-regular - latin_cyrillic */
 @font-face {
-  font-family: "Poppins";
+  font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
-  src: local(""),
-    url("../fonts/poppins-v20-latin-regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/poppins-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url('../fonts/nunito-v25-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/nunito-v25-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/nunito-v25-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/nunito-v25-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/nunito-v25-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/nunito-v25-latin_cyrillic-regular.svg#Nunito') format('svg'); /* Legacy iOS */
 }
-/* poppins-500 - latin */
+/* nunito-500 - latin_cyrillic */
 @font-face {
-  font-family: "Poppins";
+  font-family: 'Nunito';
   font-style: normal;
   font-weight: 500;
-  src: local(""), url("../fonts/poppins-v20-latin-500.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/poppins-v20-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url('../fonts/nunito-v25-latin_cyrillic-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/nunito-v25-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/nunito-v25-latin_cyrillic-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/nunito-v25-latin_cyrillic-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/nunito-v25-latin_cyrillic-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/nunito-v25-latin_cyrillic-500.svg#Nunito') format('svg'); /* Legacy iOS */
 }
+
+/* poppins-regular - latin */
+// @font-face {
+//   font-family: "Poppins";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: local(""),
+//     url("../fonts/poppins-v20-latin-regular.woff2") format("woff2"),
+//     /* Chrome 26+, Opera 23+, Firefox 39+ */
+//       url("../fonts/poppins-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+// }
+// /* poppins-500 - latin */
+// @font-face {
+//   font-family: "Poppins";
+//   font-style: normal;
+//   font-weight: 500;
+//   src: local(""), url("../fonts/poppins-v20-latin-500.woff2") format("woff2"),
+//     /* Chrome 26+, Opera 23+, Firefox 39+ */
+//       url("../fonts/poppins-v20-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+// }
 
 $color-neutral-light-theme: #ffffff;
 $color-neutral-dark-theme: #222d36;
@@ -123,7 +152,7 @@ $color-text-main-dark-theme: #a3abb2;
 $color-caption-dark-theme: #f1f2f4;
 
 .body {
-  font-family: "Poppins";
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
@@ -137,6 +166,10 @@ $color-caption-dark-theme: #f1f2f4;
     background-color: $color-bg-dark-theme;
     color: $color-text-main-dark-theme;
   }
+}
+
+ul {
+  list-style: inside;
 }
 
 .wrapper-sm {
@@ -268,6 +301,7 @@ $color-caption-dark-theme: #f1f2f4;
   border-radius: 10px;
   color: $color-text-dark;
   transition: 0.4s background-color;
+  cursor: pointer;
 }
 .button {
   &__cv {
@@ -374,8 +408,12 @@ $color-caption-dark-theme: #f1f2f4;
 .portfolio {
   position: relative;
   overflow: hidden;
+  // height: 2000px;
 
   &__projects {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 48px 4.1%;
@@ -438,9 +476,7 @@ $color-caption-dark-theme: #f1f2f4;
   &__experience {
     width: 100%;
     padding: 0 15px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    
     transform: translateX(-100%);
     transition: 0.4s all;
 
