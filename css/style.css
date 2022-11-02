@@ -250,12 +250,14 @@ ul {
 .button__contact, .button__cv {
   width: 100%;
   height: 80px;
+  padding: 0 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   color: #3d3d3d;
   transition: 0.4s background-color;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -263,7 +265,7 @@ ul {
   background-color: #fbd144;
 }
 .button__cv::after {
-  width: 45px;
+  width: 35px;
   height: 24px;
   content: "";
   background: url(../img/svg/download-pic.svg) no-repeat right;
@@ -505,7 +507,7 @@ ul {
     height: 24px;
   }
   .button__cv, .button__contact {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
     height: 44px;
   }
