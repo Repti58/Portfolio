@@ -229,13 +229,14 @@ ul {
   height: 36px;
 }
 
-/*profile end*/
 .skills-list {
+  text-align: center;
   font-size: 18px;
   padding: 0 15px;
   margin-bottom: 30px;
 }
 
+/*profile end*/
 /*buttons start*/
 .buttons__wrap {
   width: 100%;
