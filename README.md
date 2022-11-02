@@ -1,10 +1,10 @@
 <h1 align="center">
-<a href="https://repti85.github.io/Portfolio-site/">
+<a href="https://repti58.github.io/Portfolio-site/">
 Portfolio site
 </a>
 </h1>
 <p align="center">
-https://repti85.github.io/Portfolio-site
+https://repti58.github.io/Portfolio-site
 </p>
 
 ## Contains:
@@ -19,7 +19,7 @@ https://repti85.github.io/Portfolio-site
 - **Technologies used: HTML, SASS/SCSS, JavaScript**
 
 ## Appearance:
-<a href="https://repti85.github.io/Portfolio-site">
+<a href="https://repti58.github.io/Portfolio-site">
   <img src="img/portfolio-fullscreen-light.png">
   <img src="img/portfolio-fullscreen-dark.png"> 
 </a>
