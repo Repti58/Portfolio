@@ -345,10 +345,21 @@ ul {
   position: relative;
   overflow: hidden;
 }
-.portfolio__projects {
+.portfolio__experience {
+  width: 100%;
+  padding: 0 15px;
+  transform: translateX(-100%);
+  transition: 0.4s all;
   position: absolute;
   top: 0;
   left: 0;
+}
+.portfolio__experience_open {
+  transform: translateX(0);
+  position: relative;
+}
+.portfolio__projects {
+  position: absolute;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 48px 4.1%;
@@ -357,6 +368,7 @@ ul {
 }
 .portfolio__projects_open {
   transform: translateX(0);
+  position: relative;
 }
 .portfolio__project-pic {
   width: auto;
@@ -395,15 +407,6 @@ ul {
   text-decoration: underline;
   font-size: 14px;
   line-height: 10px;
-}
-.portfolio__experience {
-  width: 100%;
-  padding: 0 15px;
-  transform: translateX(-100%);
-  transition: 0.4s all;
-}
-.portfolio__experience_open {
-  transform: translateX(0);
 }
 
 /*portfolio end*/
