@@ -142,7 +142,6 @@ ul {
   padding: 0 10px;
   margin: 0 auto;
 }
-
 .wrapper-lg {
   max-width: 780px;
   padding: 0 10px;
@@ -152,6 +151,7 @@ ul {
 .lang-switcher {
   padding-top: 20px;
   text-align: center;
+  margin: 0 auto;
 }
 
 /*theme button start*/
@@ -169,20 +169,22 @@ ul {
 .theme-button_dark {
   background-color: #222d36;
 }
-
 .theme-button__ico {
+  margin: 0 auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) translateX(-48%);
+  transform: translateY(-50%) translateX(-50%);
   width: 40px;
   height: 40px;
+  transition: 0.5s;
 }
 .theme-button__ico_light {
   background: url(../img/svg/theme-light-ico.svg) no-repeat center;
 }
 .theme-button__ico_dark {
   background: url(../img/svg/theme-dark-ico.svg) no-repeat center;
+  transform: translateY(-50%) translateX(-50%) rotate(180deg);
 }
 
 /*theme button end*/

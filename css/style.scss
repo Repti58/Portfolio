@@ -188,22 +188,25 @@ ul {
   vertical-align: middle;
 }
 
-.wrapper-sm {
-  max-width: 630px;
-  padding: 0 10px;
-  margin: 0 auto;
-}
+.wrapper {
+  &-sm {
+    max-width: 630px;
+    padding: 0 10px;
+    margin: 0 auto;   
+  }
 
-.wrapper-lg {
-  max-width: 780px;
-  padding: 0 10px;
-  margin: 0 auto;
+  &-lg {
+    max-width: 780px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
 }
 
 .lang-switcher {
   padding-top: 20px;
   text-align: center;
-  // margin: 0 auto;
+  margin: 0 auto;
+  
 }
 
 /*theme button start*/
@@ -222,21 +225,28 @@ ul {
   &_dark {
     background-color: $color-neutral-dark-theme;
   }
-}
 
-.theme-button__ico {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-48%);
-  width: 40px;
-  height: 40px;
+  &__ico {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // top: 25%;
+    // left: 25%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+    // transform: scaleX(-1);
 
-  &_light {
-    background: url(../img/svg/theme-light-ico.svg) no-repeat center;
-  }
-  &_dark {
-    background: url(../img/svg/theme-dark-ico.svg) no-repeat center;
+    &_light {
+      background: url(../img/svg/theme-light-ico.svg) no-repeat center;
+      // background: url(../img/svg/globe.svg) no-repeat center ;
+    }
+    &_dark {
+      background: url(../img/svg/theme-dark-ico.svg) no-repeat center;
+      transform: translateY(-50%) translateX(-50%) rotate(180deg);
+    }
   }
 }
 /*theme button end*/
@@ -302,7 +312,6 @@ ul {
   margin-bottom: 30px;
 }
 /*profile end*/
-
 
 /*buttons start*/
 .buttons {
