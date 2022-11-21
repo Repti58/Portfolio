@@ -19,11 +19,11 @@ https://repti58.github.io/Portfolio
 - **Technologies used: HTML, SASS/SCSS, JavaScript**
 
 ## Appearance:
-.
+
 <a href="https://repti58.github.io/Portfolio">
 <img width="400" src="img/fullsize_screen.png">
-.
 <img width="400" src="img/fullsize_screen_dark.png">
 </a>
+
 ## Performance:
 <img src="img/performance.png">
