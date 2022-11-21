@@ -18,5 +18,9 @@ https://repti58.github.io/Portfolio
 - **Color theme change**
 - **Technologies used: HTML, SASS/SCSS, JavaScript**
 
+##Appearance
+<img src="img/fullsize_screen.png">
+<img src="img/fullsize_screen_dark.png">
+
 ## Performance:
 <img src="img/performance.png">
