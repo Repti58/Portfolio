@@ -16,6 +16,7 @@ https://repti58.github.io/Portfolio
 ## Features:
 - **Figma adaptive layout**
 - **Color theme change**
+- **RUS/ENG switcher**
 - **Technologies used: HTML, SASS/SCSS, JavaScript**
 
 ## Appearance:
