@@ -30,8 +30,6 @@ const slider = document.querySelector('.content-switcher__slider');
 const switchePortfolio = document.querySelector('.content-switcher__projects');
 const switcherExperience = document.querySelector('.content-switcher__experience');
 const portfolioProjectPic = document.querySelectorAll('.portfolio__project-pic')
-
-// Включаем темную тему при загрузке
 themeBtn.classList.add('theme-button_dark');
         themeBtnIco.classList.add('theme-button__ico_dark');
         body.classList.add('body_dark-theme')
@@ -45,8 +43,6 @@ themeBtn.classList.add('theme-button_dark');
         for (let i = 0; i < portfolioProjectPic.length; i++) {
             portfolioProjectPic[i].classList.remove('portfolio__project-pic_light-border')
         }
-// Включаем темную тему при загрузке
-
 themeBtn.addEventListener('click', () => {
     if (themeBtn.classList[2] === 'theme-button_dark') {
         themeBtn.classList.remove('theme-button_dark');
