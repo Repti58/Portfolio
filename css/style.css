@@ -109,6 +109,16 @@ meter {
   src: local(""), url("../fonts/nunito-v25-latin_cyrillic-500.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito-v25-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/nunito-v25-latin_cyrillic-500.woff") format("woff"), url("../fonts/nunito-v25-latin_cyrillic-500.ttf") format("truetype"), url("../fonts/nunito-v25-latin_cyrillic-500.svg#Nunito") format("svg"); /* Legacy iOS */
 }
 /* poppins-regular - latin */
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3d4045;
+  border-radius: 5px;
+}
 .body {
   font-family: "Nunito";
   font-style: normal;
